@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // test environment and the extensions
   testEnvironment: 'node',
   setupFilesAfterEnv: ["jest-extended", "jest-chain"],
