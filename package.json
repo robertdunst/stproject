@@ -2,16 +2,15 @@
   "name": "stproject",
   "version": "1.0.0",
   "description": "Repository for the Unit Testing Assignment.",
-  "scripts": {
-    "test": "jest --runInBand",
-    "test:watch": "jest --watch",
-    "coverage": "c8 --reporter=lcov --reporter=text npm test",
-    "coverage:ci": "c8 --reporter=lcov npm test && cat coverage/lcov.info | npx coveralls"
-  },
+ "scripts": {
+  "test": "jest --runInBand",
+  "test:watch": "jest --watch",
+  "coverage:ci": "c8 --reporter=lcov npm test && cat coverage/lcov.info | npx coveralls"
+},
   "devDependencies": {
-    "jest": "^29.0.0",
-    "jest-extended": "^3.2.0",
-    "jest-chain": "^1.0.3",
+    "jest": "^30.2.0",
+    "jest-extended": "^7.0.0",
+    "jest-chain": "^1.1.6",
     "c8": "^7.12.0",
     "coveralls": "^3.1.1"
   }
