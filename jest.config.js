@@ -3,6 +3,9 @@ module.exports = {
   testEnvironment: 'node',
   setupFilesAfterEnv: ["jest-extended", "jest-chain"],
 
+  // to use esm
+  transform: {},
+
   // we want coverage
   collectCoverage: true,
   coverageProvider: "v8",
