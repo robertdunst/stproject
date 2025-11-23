@@ -1,4 +1,4 @@
-const { add } = require('../src/stUtil');
+import add from '../src/stUtil.js';
 
 describe('add', () => {
   test('adds two numbers', () => {

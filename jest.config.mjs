@@ -5,6 +5,10 @@ module.exports = {
 
   // to use esm
   transform: {},
+  extensionsToTreatAsEsm: [".js"],
+  moduleNameMapper: {
+    "^(\\.{1,2}/.*)\\.js$": "$1.js",
+  },
 
   // we want coverage
   collectCoverage: true,
