@@ -2,6 +2,7 @@
   "name": "stproject",
   "version": "1.0.0",
   "description": "Repository for the Unit Testing Assignment.",
+  "type": "module",
  "scripts": {
   "test": "jest --runInBand",
   "test:watch": "jest --watch",
