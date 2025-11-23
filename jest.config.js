@@ -3,6 +3,11 @@ module.exports = {
   testEnvironment: 'node',
   setupFilesAfterEnv: ["jest-extended", "jest-chain"],
 
+  // we are using babel now to transpile the es modules
+  transform: {
+    '^.+\\.js$': 'babel-jest', // <-- Transpile ES modules
+  },
+
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1.js",
   },
