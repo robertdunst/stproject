@@ -3,9 +3,6 @@ module.exports = {
   testEnvironment: 'node',
   setupFilesAfterEnv: ["jest-extended", "jest-chain"],
 
-  // to use esm
-  transform: {},
-  extensionsToTreatAsEsm: [".js"],
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1.js",
   },
