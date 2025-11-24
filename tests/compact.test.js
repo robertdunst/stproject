@@ -5,7 +5,7 @@ describe('compact', () => {
 
   // true+false values
   test('array with true and false values', () => {
-    expect(compact([0, 1, false, 2, '', 3])).toEqual([1, 2, 3]);
+    expect(compact([0, 1, false, 2, '', 3])).toEqual([2, 3]);
     expect(compact([0, 1, true, 2, '', 3])).toEqual([1, true, 2, 3]);
   })
 
@@ -29,11 +29,12 @@ describe('compact', () => {
     expect(compact([0, [false], {a: 0}, {b: 1}, [1]])).toEqual([[false], {a: 0}, {b: 1}, [1]]);
   })
 
-  // ###
-  test('###', () => {
-    expect(compact( )).toEqual();
-    expect(compact(null)).toEqual();
-    expect(compact(111)).toEqual();
+  // no array
+  test('test for empty, undefined, null and no array input', () => {
+    expect(() => compact()).toThrow(TypeError);
+    expect(() => compact(undefined)).toThrow(TypeError);
+    expect(() => compact(null)).toThrow(TypeError);
+    expect(() => compact(111)).toThrow(TypeError);
   })
 
 })
