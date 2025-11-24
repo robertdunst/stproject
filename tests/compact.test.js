@@ -5,9 +5,10 @@ describe('compact', () => {
 
   // true+false values
   test('array with true and false values', () => {
-    expect(compact([0, 1, false, 2, '', 3])).toMatchObject([2, 3]);
-    expect(compact([0, 1, false, 2, '', 3])).toMatchObject([1, 2, 3]);
-    expect(compact([0, 1, true, 2, '', 3])).toEqual([ , true, 2, 3]);
+    expect(compact([1, 0, false, 2, '', 3])).toEqual([1, 2, 3]);
+    expect(compact([0, 1, false, 2, '', 3])).toEqual([1, 2, 3]);
+    expect(compact([1, 0, true, 2, '', 3])).toEqual([1 , true, 2, 3]);
+    expect(compact([0, 1, true, 2, '', 3])).toEqual([1 , true, 2, 3]);
   })
 
   // only true values
