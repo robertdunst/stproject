@@ -1,2 +1,2 @@
 // tests for difference function (difference.js)
-import add from '../src/difference.js';
+import difference from '../src/difference.js';

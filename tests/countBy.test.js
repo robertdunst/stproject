@@ -1,2 +1,2 @@
 // tests for countBy function (countBy.js)
-import add from '../src/countBy.js';
+import countBy from '../src/countBy.js';

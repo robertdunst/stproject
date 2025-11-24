@@ -1,2 +1,2 @@
 // tests for compact function (compact.js)
-import add from '../src/compact.js';
+import compact from '../src/compact.js';

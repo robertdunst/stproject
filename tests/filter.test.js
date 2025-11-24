@@ -1,2 +1,2 @@
 // tests for filter function (filter.js)
-import add from '../src/filter.js';
+import filter from '../src/filter.js';
