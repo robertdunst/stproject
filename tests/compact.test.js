@@ -5,15 +5,15 @@ describe('compact', () => {
 
   // true+false values
   test('array with true and false values', () => {
-    expect(compact([1, 0, false, 2, '', 3])).toEqual([1, 2, 3]);
-    expect(compact([0, 1, false, 2, '', 3])).toEqual([1, 2, 3]);
-    expect(compact([1, 0, true, 2, '', 3])).toEqual([1 , true, 2, 3]);
-    expect(compact([0, 1, true, 2, '', 3])).toEqual([1 , true, 2, 3]);
+    expect(compact([1, 0, false, 2, '', 3])).toStrictEqual([1, 2, 3]);
+    expect(compact([0, 1, false, 2, '', 3])).toStrictEqual([1, 2, 3]);
+    expect(compact([1, 0, true, 2, '', 3])).toStrictEqual([1 , true, 2, 3]);
+    expect(compact([0, 1, true, 2, '', 3])).toStrictEqual([1 , true, 2, 3]);
   })
 
   // only true values
   test('array with only true values', () => {
-    expect(compact([1, 2, 3, 4, 5])).toEqual([2, 3, 4, 5]);
+    expect(compact([1, 2, 3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
   })
 
   // only false values
