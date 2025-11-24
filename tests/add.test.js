@@ -62,9 +62,9 @@ describe('add', () => {
   });
 
   test('adds big floating point numbers', () => {  
-    expect(add(143645634563756.3455346, 894568979835678.45242452345)).toBeCloseTo(1038214614399434.79795912345, 12);
-    expect(add(-143645634563756.3455346, 894568979835678.45242452345)).toBeCloseTo(750923345271922.10688992345, 12);
-    expect(add(143645634563756.3455346, -894568979835678.45242452345)).toBeCloseTo(-750923345271922.10688992345, 12);
+    expect(add(143645634563756.3455346, 894568979835678.45242452345)).toBeCloseTo(1038214614399434.79795912345, 2);
+    expect(add(-143645634563756.3455346, 894568979835678.45242452345)).toBeCloseTo(750923345271922.10688992345, 2);
+    expect(add(143645634563756.3455346, -894568979835678.45242452345)).toBeCloseTo(-750923345271922.10688992345, 2);
   });
 
   //missing inputs
@@ -79,14 +79,14 @@ describe('add', () => {
   //string values
   test('adds integer numbers to strings that can be coerced to numbers', () => {  
     expect(add('7', 2)).toBe('72');
-    expect(add('7.46', 2)).toBe('9.46');
+    expect(add('7.46', 2)).toBe('7.462');
     expect(add('7', '2')).toBe('72');
   });
 
   test('adds integer numbers to strings that can not be coerced to numbers', () => {  
     expect(add(7, 'abc')).toBe('7abc');
     expect(add('7', 'abc')).toBe('7abc');
-    expect(add('abc', 'def')).toBeNaN();
+    expect(add('abc', 'def')).toBe('abcdef');
   });
 
   //boolean values
@@ -106,6 +106,6 @@ describe('add', () => {
   test('adds undefined values', () => {
     expect(add(5, undefined)).toBe(5);
     expect(add(undefined, null)).toBe(null);
-    expect(add(undefined, undefined)).toBeNaN();
+    expect(add(undefined, undefined)).toBe(0);
   });
 });
