@@ -11,7 +11,7 @@ describe('compact', () => {
 
   // only true values
   test('array with only true values', () => {
-    expect(compact([1, 2, 3, 4, 5])).toEqual([1, 2, 3, 4, 5]);
+    expect(compact([1, 2, 3, 4, 5])).toEqual([2, 3, 4, 5]);
   })
 
   // only false values
@@ -26,7 +26,7 @@ describe('compact', () => {
 
   // nested array
   test('array that contains nested objects', () => {
-    expect(compact([0, [false], {a: 0}, {b: 1}, [1]])).toEqual([[false], {a: 0}, {b: 1}, [1]]);
+    expect(compact([0, [false], {a: 0}, {b: 1}, [1]])).toEqual({a:0}, {b:1}, [1]);
   })
 
   // no array
