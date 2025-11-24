@@ -1,5 +1,5 @@
 // tests for capitalize function (capitalize.js)
-import add from '../src/capitalize.js';
+import capitalize from '../src/capitalize.js';
 
 describe('capitalize', () => {
 
