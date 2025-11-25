@@ -1,11 +1,12 @@
 export default {
   // test environment and the extensions
   testEnvironment: 'node',
-  setupFilesAfterEnv: ["jest-extended", "jest-chain"],
+
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 
   // we are using babel now to transpile the es modules
   transform: {
-    '^.+\\.js$': 'babel-jest', // <-- Transpile ES modules
+    '^.+\\.js$': 'babel-jest',
   },
 
   moduleNameMapper: {
