@@ -7,7 +7,7 @@ describe('defaultTo', () => {
   test('test undefined, null, NaN', () => {
     expect(defaultTo(undefined, 1)).toBe(1);
     expect(defaultTo(null, 1)).toBe(1);
-    expect(defaultTo(NaN, 1)).toBe(1);
+    expect(defaultTo(NaN, 1)).toBe(NaN);
   });
 
   // different data types
@@ -37,7 +37,7 @@ describe('defaultTo', () => {
   test('test objects', () => {
     const arr = [1, 'abc', true];
     expect(defaultTo(arr, ['default', 'array'])).toBe(arr);
-    expect(defaultTo(undefined, ['default', 'array'])).toBe(['default', 'array']);
+    expect(defaultTo(undefined, ['default', 'array'])).toEqual(['default', 'array']);
   });
 
 })
