@@ -7,7 +7,7 @@ describe('defaultTo', () => {
   test('test undefined, null, NaN', () => {
     expect(defaultTo(undefined, 1)).toBe(1);
     expect(defaultTo(null, 1)).toBe(1);
-    expect(defaultTo(NaN, 1)).toBe(NaN);          // wrong output: should return 1
+    expect(defaultTo(NaN, 1)).toBe(1);          // fail
   });
 
   // different data types
