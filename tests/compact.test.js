@@ -5,10 +5,10 @@ describe('compact', () => {
 
   // true+false values
   test('array with true and false values', () => {
-    expect(compact([1, 0, false, 2, '', 3])).toStrictEqual([1, 2, 3]);
-    expect(compact([0, 1, false, 2, '', 3])).toStrictEqual([1, 2, 3]);
-    expect(compact([1, 0, true, 2, '', 3])).toStrictEqual([1 , true, 2, 3]);
-    expect(compact([0, 1, true, 2, '', 3])).toStrictEqual([1 , true, 2, 3]);
+    expect(compact([1, 0, false, 2, '', 3])).toEqual([1, 2, 3]);
+    expect(compact([0, 1, false, 2, '', 3])).toEqual([1, 2, 3]);
+    expect(compact([1, 0, true, 2, '', 3])).toEqual([1 , true, 2, 3]);
+    expect(compact([0, 1, true, 2, '', 3])).toEqual([1 , true, 2, 3]);
   })
 
   // only true values
@@ -28,7 +28,7 @@ describe('compact', () => {
 
   // nested array
   test('array that contains nested objects', () => {
-    expect(compact([0, [false], {a: 0}, {b: 1}, [1]])).toEqual({a:0}, {b:1}, [1]);
+    expect(compact([0, [false], {a: 0}, {b: 1}, [1]])).toEqual([{a:0}, {b:1}, [1]]);
   })
 
   // no array
