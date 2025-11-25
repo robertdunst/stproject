@@ -57,7 +57,7 @@ describe('words()', () => {
     test('When only alphanumeric characters, unicodeWords is not called', () => {
         expect(words('Hey we are a Software Testing Team 1234'))
             .toBeArray()
-            .toIncludeSameMembers(['Hey', 'we', 'are', 'a', 'Software', 'Testing', 'Team']);
+            .toIncludeSameMembers(['Hey', 'we', 'are', 'a', 'Software', 'Testing', 'Team', '1234']);
         expect(unicodeWords).not.toHaveBeenCalled();
     });
 
