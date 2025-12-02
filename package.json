@@ -6,7 +6,7 @@
  "scripts": {
   "test": "jest --runInBand",
   "test:watch": "jest --watch",
-  "coverage:ci": "c8 --reporter=lcov jest --runInBand || true && cat coverage/lcov.info | npx coveralls --force"
+  "coverage:ci": "c8 --reporter=lcov --all jest --runInBand || true; ls -R coverage && cat coverage/lcov.info | npx coveralls --force"
 },
   "devDependencies": {
     "jest": "^30.2.0",
