@@ -4,9 +4,7 @@
   "description": "Repository for the Unit Testing Assignment.",
   "type": "module",
  "scripts": {
-  "test": "jest --runInBand",
-  "test:watch": "jest --watch",
-  "coverage:ci": "c8 --reporter=lcov --all --report-dir=coverage --include=src/**/*.js jest --runInBand || true"
+  "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
 },
   "devDependencies": {
     "jest": "^30.2.0",
