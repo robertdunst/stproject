@@ -5,7 +5,6 @@
   "type": "module",
  "scripts": {
   "coverage": "jest --coverage || true && cat ./coverage/lcov.info | coveralls"
-}
 },
   "devDependencies": {
     "jest": "^30.2.0",
