@@ -24,7 +24,12 @@ jobs:
       - name: Install all the necessary dependencies
         run: npm ci
 
-      - name: Run the tests and upload coverage
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run tests and generate coverage
         run: npm run coverage:ci
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+
+      - name: Upload coverage to Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
