@@ -6,8 +6,7 @@
  "scripts": {
   "test": "jest --runInBand",
   "test:watch": "jest --watch",
-  "coverage:ci": "c8 --reporter=lcov --all --report-dir=coverage jest --runInBand || true"
-
+  "coverage:ci": "c8 --reporter=lcov --all --report-dir=coverage --include=src/**/*.js jest --runInBand || true"
 },
   "devDependencies": {
     "jest": "^30.2.0",
